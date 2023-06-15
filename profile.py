@@ -5,7 +5,7 @@ import geni.rspec.pg as rspec
 request = portal.context.makeRequestRSpec()
 
 prefixForIP = "192.168.1."
-link = request.LAN("1an")
+link = request.LAN("lan")
 
 # Create a XenVM
 for i in range(2):
