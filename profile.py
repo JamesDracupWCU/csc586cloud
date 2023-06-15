@@ -24,5 +24,5 @@ for i in range(2):
 
 
 
-# Print the RSpec to the enclosing page.
-portal.context.printRequestRSpec()
+  # Print the RSpec to the enclosing page.
+  portal.context.printRequestRSpec()
