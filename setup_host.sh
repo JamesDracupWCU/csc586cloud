@@ -12,3 +12,4 @@ while [ ! -f /var/nfs/keys/id_rsa ]; do
  cp /var/nfs/keys/id_rsa* /users/jd926102/.ssh/
  chown jd926102: /users/jd926102/.ssh/id_rsa*
  runuser -u jd926102 -- cat /users/jd926102/.ssh/id_rsa.pub >> /users/jd926102/.ssh/authorized_keys
+
