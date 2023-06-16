@@ -14,15 +14,3 @@ sudo chown nobody:nogroup /var/nfs/keys
 echo "/var/nfs/keys   192.168.1.2(rw,sync,no_root_squash,no_subtree_check)" | sudo tee -a /etc/exports
 systemctl restart nfs-kernel-server
 
-
-
-
-# Ignore most of this code is used in order above
-# On host node in Experiment
-sudo mkdir -p /var/nfs/keys
-sudo mount 192.168.1.1:/var/nfs/keys /var/nfs/keys
-df -h
-sudo cp /var/nfs/keys/id_rsa* /users/jd926102/.ssh/
-sudo chown jd926102: .ssh/id_rsa*
-cat .ssh/id_rsa.pub >> .ssh/authorized_keys
-ssh localhost
