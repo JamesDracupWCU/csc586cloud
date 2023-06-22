@@ -15,35 +15,35 @@ loginShell: /bin/dash
 homeDirectory: /home/student
 
 # Merino
-#dn: uid=merino,ou=People,dc=wcupa,dc=edu
-#objectClass: inetOrgPerson
-#objectClass: posixAccount
-#objectClass: shadowAccount
-#uid: merino
-#sn: Merino
-#givenName: Golden
-#cn: merino
-#displayName: merino
-#uidNumber: 10001
-#gidNumber: 5000
-#userPassword: rammy
-#gecos: Golden Merino
-#loginShell: /bin/dash
-#homeDirectory: /nfs/home/merino
+dn: uid=merino,ou=People,dc=wcupa,dc=edu
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: merino
+sn: Merino
+givenName: Golden
+cn: merino
+displayName: merino
+uidNumber: 10001
+gidNumber: 5000
+userPassword: rammy
+gecos: Golden Merino
+loginShell: /bin/dash
+homeDirectory: /nfs/home/merino
 
 # Dorper
-#dn: uid=dorper,ou=People,dc=wcupa,dc=edu
-#objectClass: inetOrgPerson
-#objectClass: posixAccount
-#objectClass: shadowAccount
-#uid: dorper
-#sn: Dorper
-#givenName: Golden
-#cn: dorper
-#displayName: dorper
-#uidNumber: 10002
-#gidNumber: 5000
-#userPassword: rammy
-#gecos: Golden Dorper
-#loginShell: /bin/dash
-#homeDirectory: /nfs/home/dorper
+dn: uid=dorper,ou=People,dc=wcupa,dc=edu
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: dorper
+sn: Dorper
+givenName: Golden
+cn: dorper
+displayName: dorper
+uidNumber: 10002
+gidNumber: 5000
+userPassword: rammy
+gecos: Golden Dorper
+loginShell: /bin/dash
+homeDirectory: /nfs/home/dorper
