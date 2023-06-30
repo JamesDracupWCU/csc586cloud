@@ -1,7 +1,7 @@
 #!/bin/bash
 
 log="/var/webserver_monitor/unauthorized.log"
-#Actual email to be notified if new unauthorized attempts occur in the 5-minute intervals or not.
+#Actual email should be placed here to be notified if new unauthorized attempts occur in the 5-minute intervals or not.
 admin_email="myemail@gmail.com"
 
 if [ -f "$log" ]; then
