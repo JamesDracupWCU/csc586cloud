@@ -1,0 +1,9 @@
+# Need Sudo since I used Sudo for granting privileges for scan and monitor scripts. 
+# regular crontab -e without sudo wasn't executing for me for some reason.
+# for Webserver scan.sh
+sudo crontab -e
+*/5 * * * * /users/jd926102/scan.sh
+
+# for Observer monitor.sh
+sudo crontab -e
+0 * * * * /users/jd926102/monitor.sh
