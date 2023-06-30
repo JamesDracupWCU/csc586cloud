@@ -1,8 +1,8 @@
 #!/bin/bash
 
 log="/var/webserver_monitor/unauthorized.log"
-#Actual email to be notified every hour if new unauthorized attempts occur in the 5-minute intervals or not.
-admin_email="jamesdracup16@gmail.com"
+#Actual email to be put here to notify every hour if new unauthorized attempts occur in the 5-minute intervals or not.
+admin_email="ActualEmailhere@gmail.com"
 
 if [ -f "$log" ]; then
     current=$(cat location.txt || echo 0)
