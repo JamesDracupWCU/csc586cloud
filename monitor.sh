@@ -1,17 +1,14 @@
 #!/bin/bash
 
 log="/var/webserver_monitor/unauthorized.log"
-#Actual email to be put here to notify every hour if new unauthorized attempts occur in the 5-minute intervals or not.
-admin_email="ActualEmailhere@gmail.com"
+admin_email="jamesdracup16@gmail.com"
+previous_append=$(cat "/var/webserver_monitor/previous_append.txt" 2>/dev/null)
+current_append=$(cat "$log")
 
-if [ -f "$log" ]; then
-    current=$(cat location.txt || echo 0)
-    new=$(tail -c +$((current + 1)) "$log")
-
-    if [ -n "$new" ]; then
-        echo "$new" | mail -s "New Unauthorized Access Detected:" "$admin_email"
-        echo "$(wc -l < "$log")" > location.txt
-    else
-        echo "No unauthorized access." | mail -s "No unauthorized access" "$admin_email"
-    fi
+if [ -s "$log" ] &&  [ "$current_append" != "$previous_append" ]; then
+    echo -e "New Unauthorized Access Attempts (Newest appended at bottom):\n\n" "$current_append" | mail -s "New Unauthorized Access" "$admin_email"
 else
+    echo "No Unauthorized Access" | mail -s "No Unauthorized Access" "$admin_email"
+fi
+
+echo "$current_append" > "/var/webserver_monitor/previous_append.txt"
